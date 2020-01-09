@@ -13,6 +13,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# Bypass Setupwizard
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.setupwizard.mode=DISABLED
+
 #ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
